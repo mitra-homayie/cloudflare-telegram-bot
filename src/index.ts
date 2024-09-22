@@ -56,15 +56,16 @@ export default {
 				console.log('url is', fileUrl, 'path is', file.file_path);
 
 				const downloadedFile = new InputFile(new URL(fileUrl));
-				const xx = await fetch(fileUrl).then((res) => res.blob());
+				const xx = await fetch(fileUrl).then((res) => res.bytes());
 
 				const formData = new FormData();
-				formData.append('file', xx);
-				const response = await fetch('http://localhost:8000/gett', {
-					method: 'post',
-					body: formData,
-				});
+				// formData.append('file', xx);
+				// const response = await fetch('http://localhost:8000/gett', {
+				// 	method: 'post',
+				// 	body: formData,
+				// });
 				await bot.api.sendVoice(chatId, downloadedFile, params);
+				await bot.api.sendVoice(chatId, new InputFile(xx), params);
 				console.log('file is', downloadedFile);
 
 				await ctx.reply('Voice message has been successfully downloaded and processed.');
