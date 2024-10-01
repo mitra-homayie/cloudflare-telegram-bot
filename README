@@ -1,4 +1,3 @@
-
 # Cloudflare Telegram Bot
 
 A Cloudflare Worker Telegram bot that responds to user commands via Telegram.
