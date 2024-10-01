@@ -53,7 +53,6 @@ export default {
 
 				// Generate the file URL
 				const fileUrl = `https://api.telegram.org/file/bot${bot.token}/${file.file_path}`;
-				console.log('url is', fileUrl, 'path is', file.file_path);
 
 				const downloadedFile = new InputFile(new URL(fileUrl));
 				const xx = await fetch(fileUrl).then((res) => res.bytes());
@@ -66,7 +65,6 @@ export default {
 				// });
 				await bot.api.sendVoice(chatId, downloadedFile, params);
 				await bot.api.sendVoice(chatId, new InputFile(xx), params);
-				console.log('file is', downloadedFile);
 
 				await ctx.reply('Voice message has been successfully downloaded and processed.');
 			} catch (error) {
