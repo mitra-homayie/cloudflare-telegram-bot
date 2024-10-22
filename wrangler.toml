@@ -18,14 +18,15 @@ compatibility_flags = ["nodejs_compat"]
 # - https://developers.cloudflare.com/workers/configuration/secrets/
 [vars]
 BOT_INFO = """{
-    "id": 7997754709:AAGnwcCbsYT22KtgOKX_o7kEZAdDD3y0k9A,
-    "is_bot": true,
-    "first_name": "IELTS{AI}Hub",
-    "username": "ielts_aihub_bot",
-    "can_join_groups": true,
-    "can_read_all_group_messages": false,
-    "supports_inline_queries": true,
-    "can_connect_to_business": false
+"id":7997754709,
+"is_bot":true,
+"first_name":"IELTS{AI}Hub",
+"username":"ielts_aihub_bot",
+"can_join_groups":true,
+"can_read_all_group_messages":false,
+"supports_inline_queries":false,
+"can_connect_to_business":false,
+"has_main_web_app":false
 }"""
 
 # Bind the Workers AI model catalog. Run machine learning models, powered by serverless GPUs, on Cloudflare’s global network
