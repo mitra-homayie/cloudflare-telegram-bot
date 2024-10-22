@@ -18,10 +18,10 @@ compatibility_flags = ["nodejs_compat"]
 # - https://developers.cloudflare.com/workers/configuration/secrets/
 [vars]
 BOT_INFO = """{
-    "id": 8053984427,
+    "id": 7997754709,
     "is_bot": true,
-    "first_name": "test",
-    "username": "voice2Test2bot",
+    "first_name": "IELTS{AI}Hub",
+    "username": "ielts_aihub_bot",
     "can_join_groups": true,
     "can_read_all_group_messages": false,
     "supports_inline_queries": true,
