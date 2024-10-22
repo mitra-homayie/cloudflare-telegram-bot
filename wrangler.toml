@@ -18,7 +18,7 @@ compatibility_flags = ["nodejs_compat"]
 # - https://developers.cloudflare.com/workers/configuration/secrets/
 [vars]
 BOT_INFO = """{
-    "id": 7997754709,
+    "id": 7997754709:AAGnwcCbsYT22KtgOKX_o7kEZAdDD3y0k9A,
     "is_bot": true,
     "first_name": "IELTS{AI}Hub",
     "username": "ielts_aihub_bot",
