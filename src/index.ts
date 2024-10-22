@@ -58,11 +58,11 @@ export default {
 				const xx = await fetch(fileUrl).then((res) => res.bytes());
 
 				const formData = new FormData();
-				// formData.append('file', xx);
-				// const response = await fetch('http://localhost:8000/gett', {
-				// 	method: 'post',
-				// 	body: formData,
-				// });
+				formData.append('file', xx);
+				const response = await fetch('', {
+					method: 'post',
+					body: formData,
+				});
 				await bot.api.sendVoice(chatId, downloadedFile, params);
 				await bot.api.sendVoice(chatId, new InputFile(xx), params);
 
@@ -83,7 +83,10 @@ export default {
 			};
 			await ctx.replyWithPhoto('https://grammy.dev/images/grammY.png', params);
 		});
+		
+		bot.start()
 
 		return webhookCallback(bot, 'cloudflare-mod')(request);
 	},
 };
+
